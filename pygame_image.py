@@ -16,8 +16,8 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
-        screen.blit(bg_img, [0, 0])
+        x=tmr%800
+        screen.blit(bg_img, [-x, 0])
         kou_rct = kou_img.get_rect() #硬貨トンのレクとを抽出
         kou_rct.center = 300,200
         screen.blit(kou_img,kou_rct) 
